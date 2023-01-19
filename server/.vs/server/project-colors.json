@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "4b160a56-9d00-491b-8916-30af5a1d59a9": {
+      "ProjectGuid": "4b160a56-9d00-491b-8916-30af5a1d59a9",
+      "DisplayName": "OnlineBankingSystemAPIService",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
