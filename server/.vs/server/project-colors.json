@@ -5,7 +5,27 @@
       "ProjectGuid": "4b160a56-9d00-491b-8916-30af5a1d59a9",
       "DisplayName": "OnlineBankingSystemAPIService",
       "ColorIndex": 0
+    },
+    "5a18a995-adec-470e-a712-7aa46e771812": {
+      "ProjectGuid": "5a18a995-adec-470e-a712-7aa46e771812",
+      "DisplayName": "server",
+      "ColorIndex": 1
+    },
+    "bacd750c-0b2e-472c-94a7-16558fa3f261": {
+      "ProjectGuid": "bacd750c-0b2e-472c-94a7-16558fa3f261",
+      "DisplayName": "Serverside",
+      "ColorIndex": 2
+    },
+    "ff9ab33f-2c84-4476-a58e-0a6a5b1970fe": {
+      "ProjectGuid": "ff9ab33f-2c84-4476-a58e-0a6a5b1970fe",
+      "DisplayName": "ServerAPI",
+      "ColorIndex": 3
+    },
+    "8ceb601c-6004-40ac-b26f-23c654bd35d7": {
+      "ProjectGuid": "8ceb601c-6004-40ac-b26f-23c654bd35d7",
+      "DisplayName": "WebApplication1",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 5
 }
