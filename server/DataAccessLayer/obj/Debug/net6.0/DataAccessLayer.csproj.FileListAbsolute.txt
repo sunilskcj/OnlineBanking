@@ -1,0 +1,17 @@
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.deps.json
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.dll
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\DataAccessLayer\bin\Debug\net6.0\ref\DataAccessLayer.dll
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.dll
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\DataAccessLayer\obj\Debug\net6.0\ref\DataAccessLayer.dll
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.runtimeconfig.json
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.genruntimeconfig.cache
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\DataAccessLayer\bin\Debug\net6.0\BusinessModels.dll
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\DataAccessLayer\bin\Debug\net6.0\BusinessModels.pdb
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CopyComplete
