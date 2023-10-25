@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "UPEQmiv3DwjpooYi3Ff34JOM/WpHt0xIkKBkyahjhPddeWy0QJ3NCQ5/eLBu4QdkBYE9HheqoN8Us1W2oxen9g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sunil\\Desktop\\work\\for_u\\MyWork\\OnlineBanking\\OnlineBanking\\server\\BusinessModels\\BusinessModels.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sunil\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.15\\microsoft.aspnetcore.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\sunil\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.15\\microsoft.netcore.app.ref.6.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}

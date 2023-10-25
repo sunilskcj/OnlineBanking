@@ -1,0 +1,12 @@
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\BusinessModels\obj\Debug\net6.0\BusinessModels.csproj.AssemblyReference.cache
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\BusinessModels\obj\Debug\net6.0\BusinessModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\BusinessModels\obj\Debug\net6.0\BusinessModels.AssemblyInfoInputs.cache
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\BusinessModels\obj\Debug\net6.0\BusinessModels.AssemblyInfo.cs
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\BusinessModels\obj\Debug\net6.0\BusinessModels.csproj.CoreCompileInputs.cache
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\BusinessModels\bin\Debug\net6.0\BusinessModels.deps.json
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\BusinessModels\bin\Debug\net6.0\BusinessModels.dll
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\BusinessModels\bin\Debug\net6.0\ref\BusinessModels.dll
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\BusinessModels\bin\Debug\net6.0\BusinessModels.pdb
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\BusinessModels\obj\Debug\net6.0\BusinessModels.dll
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\BusinessModels\obj\Debug\net6.0\ref\BusinessModels.dll
+C:\Users\sunil\Desktop\work\for_u\MyWork\OnlineBanking\OnlineBanking\server\BusinessModels\obj\Debug\net6.0\BusinessModels.pdb
