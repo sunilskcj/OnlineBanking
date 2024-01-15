@@ -41,13 +41,13 @@ namespace ServerAPI.Controllers
         }
 
         [HttpGet]
-        [Route("id")]
+        [Route("{id}")]  
 
-        public IActionResult FetchAccountById()
+        public IActionResult FetchAccountById(int id)
         {
 
-            string userid = User.Claims.First().Value;
-            int id = int.Parse(userid);
+            //string userid = User.Claims.First().Value;
+            //int id = int.Parse(userid);
             var fetchedData = _accountFieldDao.FetchAccountById(id);
             return this.Ok(fetchedData);
         }
@@ -55,7 +55,7 @@ namespace ServerAPI.Controllers
         [HttpGet]
         [Route("admin/{id}")]
 
-        public IActionResult FetchAccountById(int id)
+        public IActionResult FetchAccountByIdadmin(int id)
         {
 
 
@@ -84,10 +84,11 @@ namespace ServerAPI.Controllers
 
 
         [HttpPut]
-        public IActionResult UpdateAccount(AccountModel account)
+        [Route("{id}")]
+        public IActionResult UpdateAccount(AccountModel account, int id)
         {
-            string userid = User.Claims.First().Value;
-            int id = int.Parse(userid);
+            //string userid = User.Claims.First().Value;
+            //int id = int.Parse(userid);
             var result = _accountFieldDao.UpdateAccountField(account, id);
 
             return this.CreatedAtAction(
