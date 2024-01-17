@@ -1,0 +1,45 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="header-title pb-3 mt-0">Payments</h5>
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead>
+                                <tr class="align-self-center">
+                                    <th>Reference ID</th>
+                                    <th>Recepient Name</th>
+                                    <th>Bank Name</th>
+                                    <th>Payment Type</th>
+                                    <th>Paid Date</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Pay Now</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let d of data"  >
+                                    <td>{{d.transactionReferenceId}}</td>
+                                    <td>{{d.payeeId}}</td>
+                                    <td>HDFC Bank</td>
+                                    <td>{{d.modeId}}</td>
+                                    <td>{{d.transactionDate}}</td> 
+                                    <td>{{d.transactionamount}}</td>
+                                    <td>{{d.paymentStatus}}</td>
+                                    <td><button (click)="navigateverify(d.transactionReferenceId)" class="btn btn-primary"> Pay Now</button> </td>
+                                </tr>
+                                
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--end table-responsive-->
+                    <!-- <div class="pt-3 border-top text-right"><a href="#" class="text-primary">View all <i class="mdi mdi-arrow-right"></i></a></div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="accordion" id="accordionPayment">
+    <div class="accordion-item mb-3">
+     <div class="container">
+       <h1 class="h3 mb-3">Verify Transaction</h1>
+        <div class="mb-3">
+            <label class="form-label">ReferenceID -  {{data?.transactionReferenceId}}</label>
+        </div>
+     <div class="mb-3">
+       <label class="form-label">ModeID - {{data?.modeId}}</label>
+     </div>
+     <div class="mb-3">
+       <label class="form-label">Paid to - {{data?.payeeId}}</label>
+     </div>
+     <div class="mb-3">
+       <label class="form-label">Amount - {{data?.transactionamount}}</label>
+      </div>
+     <div class="mb-3">
+          <label class="form-label">From Account - {{data?.customerId}}</label>
+     </div>
+     <div class="mb-3">
+       <label class="form-label">On - {{data?.transactionDate}}</label>
+     </div>
+      <div class="mb-3">
+        <label class="form-label">Remarks - {{data?.remark}}</label>  
+     </div>
+     <div class="col-lg-3">
+        <button class="btn btn-primary w-100 mt-2" (click)="proceed()"  type="submit">Proceed</button>
+      </div>
+     </div>
+    </div>
+</div>

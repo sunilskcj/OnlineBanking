@@ -1,0 +1,9 @@
+.offcanvas-header, .offcanvas-body , .navbar{
+    background: #0156d4!important;
+}
+a , .btn , h5{
+    color: white!important;
+}
+*{
+    text-align: center;
+}

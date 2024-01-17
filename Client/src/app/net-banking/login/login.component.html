@@ -1,0 +1,61 @@
+<br>
+<div>
+    <h4>Login to your Account</h4><br>
+    <form [formGroup]="Logininfo">
+        <input type="radio" name="radioCalc" id="radioAdd"  (change)="saveSelection(1)" >&nbsp;User&nbsp;&nbsp;
+        <input type="radio" name="radioCalc" id="radioSub"  (change)="saveSelection(2)" >&nbsp;Admin<br>
+        <div>
+          <label for="customerId">User ID </label> &nbsp;
+           <input name="customerId" type="number" class="form" id="customerId" formControlName="customerId"/><br><br>
+        </div>
+        <div [hidden]="Logininfo.controls['customerId'].valid || Logininfo.controls['customerId'].value || Logininfo.controls['customerId'].pristine"
+          class="alert-danger">
+          <div *ngIf="Logininfo.controls['customerId'].errors?.['required']">
+            LoginID is required
+          </div>
+        </div>
+        <div>
+         <label for="Password">Password </label>&nbsp;
+         <input name="netBankingPassword" type="password" class="password" id="password" formControlName="netBankingPassword" /><br><br>
+        </div>
+        <div [hidden]="Logininfo.controls['netBankingPassword'].valid || Logininfo.controls['netBankingPassword'].pristine"
+        class="alert alert-danger">
+        <div *ngIf="Logininfo.controls['netBankingPassword'].errors?.['required']">
+            Password is required
+        </div>
+        <div *ngIf="Logininfo.controls['netBankingPassword'].errors?.['minlengtherror']">
+            Password length should be length:
+            {{Logininfo.controls['netBankingPassword'].errors?.['minlengtherror'].expectedlength}}.
+            Current length:
+            length:{{Logininfo.controls['netBankingPassword'].errors?.['minlengtherror'].currentlength}}
+        </div>
+        <div *ngIf="Logininfo.controls['netBankingPassword'].errors?.['maxlengtherror']">
+            Password length should NOT be more
+            than{{Logininfo.controls['netBankingPassword'].errors?.['maxlengtherror'].expectedlength}}. Current
+            length:{{Logininfo.controls['netBankingPassword'].errors?.['maxlengtherror'].currentlength}}
+        </div>
+
+        <div *ngIf="Logininfo.controls['netBankingPassword'].errors?.['uppercase']">
+            {{Logininfo.controls['netBankingPassword'].errors?.['uppercase']}}
+        </div>
+
+        <div *ngIf="Logininfo.controls['netBankingPassword'].errors?.['lowercase']">
+            {{Logininfo.controls['netBankingPassword'].errors?.['lowercase']}}
+        </div>
+
+        <div *ngIf="Logininfo.controls['netBankingPassword'].errors?.['digit']">
+            {{Logininfo.controls['netBankingPassword'].errors?.['digit']}}
+        </div>
+        
+    </div> 
+    <div [hidden]="!err" class="alert alert-danger" role="alert">
+        {{err}}
+      </div>
+        <button class="btn btn-primary" type="submit" (click)="login()">Login</button><br><br>
+    </form>
+</div>
+<div>
+   <a routerLink="/register"><h5>First Time User ? Register</h5><br></a> 
+   <a routerLink="/forgetpassword"><h5>Forget User ID</h5><br></a>
+    <a routerLink="/forgetpassword"><h5>Forget Password</h5><br></a>
+</div>

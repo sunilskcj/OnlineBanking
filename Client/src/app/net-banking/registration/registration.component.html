@@ -1,0 +1,160 @@
+
+<br>
+<div>
+    <h4>Register your Account for Net Banking</h4><br/>
+    <form [formGroup]="registration" (ngSubmit)="submitData()">
+      <div>
+        <label for="AccountNumber">Account Number</label> &nbsp;
+        <input name="AccountNumber" type="text" class="form" id="AccountNumber" formControlName="AccountNumber"/><br><br>
+      </div>      
+      <div [hidden]="registration.controls['AccountNumber'].valid || registration.controls['AccountNumber'].pristine"
+            class="alert alert-danger">
+            <div *ngIf="registration.controls['AccountNumber'].errors?.['required']">
+                AccountNumber number is required
+            </div>
+      </div>
+      <div>
+           <label for="SetLoginPassword">Set Login Password </label>&nbsp;
+           <input name="SetLoginPassword" type="password" class="form" id="SetLoginPassword" formControlName="SetLoginPassword"/><br><br>
+      </div>
+        <div [hidden]="registration.controls['SetLoginPassword'].valid || registration.controls['SetLoginPassword'].pristine"
+          class="alert-danger">
+        <div *ngIf="registration.controls['SetLoginPassword'].errors?.['required']">
+              Login Password is required
+        </div>
+        <div *ngIf="registration.controls['SetLoginPassword'].errors?.['minlengtherror']">
+              Password length should be length:
+              {{registration.controls['SetLoginPassword'].errors?.['minlengtherror'].expectedlength}}.
+              Current length:
+              length:{{registration.controls['SetLoginPassword'].errors?.['minlengtherror'].currentlength}}
+        </div>
+        <div *ngIf="registration.controls['SetLoginPassword'].errors?.['maxlengtherror']">
+              Password length should NOT be more
+              than{{registration.controls['SetLoginPassword'].errors?.['maxlengtherror'].expectedlength}}. Current
+              length:{{registration.controls['SetLoginPassword'].errors?.['maxlengtherror'].currentlength}}
+        </div>
+
+        <div *ngIf="registration.controls['SetLoginPassword'].errors?.['uppercase']">
+              {{registration.controls['SetLoginPassword'].errors?.['uppercase']}}
+        </div>
+  
+        <div *ngIf="registration.controls['SetLoginPassword'].errors?.['lowercase']">
+              {{registration.controls['SetLoginPassword'].errors?.['lowercase']}}
+        </div>
+
+        <div *ngIf="registration.controls['SetLoginPassword'].errors?.['digit']">
+              {{registration.controls['SetLoginPassword'].errors?.['digit']}}
+        </div>
+        </div>
+   
+       <div>
+        <label for="ConfirmLoginPassword">Confirm Login Password </label> &nbsp;
+         <input name="ConfirmLoginPassword" type="password" class="form" id="ConfirmLoginPassword" formControlName="ConfirmLoginPassword"/><br><br>
+       </div>
+        <div [hidden]="registration.controls['ConfirmLoginPassword'].valid || registration.controls['ConfirmLoginPassword'].pristine"
+          class="alert-danger">
+         <div *ngIf="registration.controls['ConfirmLoginPassword'].errors?.['required']">
+              Login Password is required
+          </div>
+         <div *ngIf="registration.controls['ConfirmLoginPassword'].errors?.['minlengtherror']">
+              Password length should be length:
+              {{registration.controls['ConfirmLoginPassword'].errors?.['minlengtherror'].expectedlength}}.
+              Current length:
+              length:{{registration.controls['ConfirmLoginPassword'].errors?.['minlengtherror'].currentlength}}
+        </div>
+        <div *ngIf="registration.controls['ConfirmLoginPassword'].errors?.['maxlengtherror']">
+              Password length should NOT be more
+              than{{registration.controls['ConfirmLoginPassword'].errors?.['maxlengtherror'].expectedlength}}. Current
+              length:{{registration.controls['ConfirmLoginPassword'].errors?.['maxlengtherror'].currentlength}}
+        </div>
+
+        <div *ngIf="registration.controls['ConfirmLoginPassword'].errors?.['uppercase']">
+              {{registration.controls['ConfirmLoginPassword'].errors?.['uppercase']}}
+        </div>
+  
+        <div *ngIf="registration.controls['ConfirmLoginPassword'].errors?.['lowercase']">
+              {{registration.controls['ConfirmLoginPassword'].errors?.['lowercase']}}
+        </div>
+
+        <div *ngIf="registration.controls['ConfirmLoginPassword'].errors?.['digit']">
+              {{registration.controls['ConfirmLoginPassword'].errors?.['digit']}}
+        </div>
+        </div>
+      <div>
+        <label for="SetTransactionPassword">Set Transaction Password </label>&nbsp;
+        <input name="SetTransactionPassword" type="password" class="form" id="SetTransactionPassword" formControlName="SetTransactionPassword"/><br><br>
+      </div>
+      <div [hidden]="registration.controls['SetTransactionPassword'].valid || registration.controls['SetTransactionPassword'].pristine"
+          class="alert-danger">
+        <div *ngIf="registration.controls['SetTransactionPassword'].errors?.['required']">
+              Password is required
+        </div>
+        <div *ngIf="registration.controls['SetTransactionPassword'].errors?.['minlengtherror']">
+              Password length should be length:
+              {{registration.controls['SetTransactionPassword'].errors?.['minlengtherror'].expectedlength}}.
+              Current length:
+              length:{{registration.controls['SetTransactionPassword'].errors?.['minlengtherror'].currentlength}}
+        </div>
+        <div *ngIf="registration.controls['SetTransactionPassword'].errors?.['maxlengtherror']">
+              Password length should NOT be more
+              than{{registration.controls['SetTransactionPassword'].errors?.['maxlengtherror'].expectedlength}}. Current
+              length:{{registration.controls['SetTransactionPassword'].errors?.['maxlengtherror'].currentlength}}
+        </div>
+
+        <div *ngIf="registration.controls['SetTransactionPassword'].errors?.['uppercase']">
+              {{registration.controls['SetTransactionPassword'].errors?.['uppercase']}}
+        </div>
+  
+        <div *ngIf="registration.controls['SetTransactionPassword'].errors?.['lowercase']">
+              {{registration.controls['SetTransactionPassword'].errors?.['lowercase']}}
+        </div>
+
+        <div *ngIf="registration.controls['SetTransactionPassword'].errors?.['digit']">
+              {{registration.controls['SetTransactionPassword'].errors?.['digit']}}
+        </div>
+      </div>
+      <div>
+        <label for="ConfirmTransactionPassword">Confirm Transaction Password</label> &nbsp;
+        <input name="ConfirmTransactionPassword" type="password" class="ConfirmTransactionPassword" id="ConfirmTransactionPassword" formControlName="ConfirmTransactionPassword"/><br><br>
+      </div>
+      <div [hidden]="registration.controls['ConfirmTransactionPassword'].valid || registration.controls['ConfirmTransactionPassword'].pristine"
+             class="alert alert-danger">
+            <div *ngIf="registration.controls['ConfirmTransactionPassword'].errors?.['required']">
+             Confirm Password should be entered
+            </div>
+            <div *ngIf="registration.controls['ConfirmTransactionPassword'].errors?.['minlengtherror']">
+                  Password length should be length:
+                  {{registration.controls['ConfirmTransactionPassword'].errors?.['minlengtherror'].expectedlength}}.
+                  Current length:
+                  length:{{registration.controls['ConfirmTransactionPassword'].errors?.['minlengtherror'].currentlength}}
+            </div>
+            <div *ngIf="registration.controls['ConfirmTransactionPassword'].errors?.['maxlengtherror']">
+                  Password length should NOT be more
+                  than{{registration.controls['ConfirmTransactionPassword'].errors?.['maxlengtherror'].expectedlength}}. Current
+                  length:{{registration.controls['ConfirmTransactionPassword'].errors?.['maxlengtherror'].currentlength}}
+            </div>
+    
+            <div *ngIf="registration.controls['ConfirmTransactionPassword'].errors?.['uppercase']">
+                  {{registration.controls['ConfirmTransactionPassword'].errors?.['uppercase']}}
+            </div>
+      
+            <div *ngIf="registration.controls['ConfirmTransactionPassword'].errors?.['lowercase']">
+                  {{registration.controls['ConfirmTransactionPassword'].errors?.['lowercase']}}
+            </div>
+    
+            <div *ngIf="registration.controls['ConfirmTransactionPassword'].errors?.['digit']">
+                  {{registration.controls['ConfirmTransactionPassword'].errors?.['digit']}}
+            </div>
+            <div class="alert alert-danger" *ngIf="registration.controls['ConfirmTransactionPassword'].errors?.['misMatch'] ">
+                Mismatch
+            </div>
+       </div>
+        <label for="otp">Enter OTP</label>&nbsp;
+        <input name="otp" type="text" /><br><br>
+
+        <div>
+            <button type="submit" class="btn btn-primary" [disabled]="!registration.valid" (click)="submitData()">Submit</button>
+        </div>
+      
+    </form>
+</div>

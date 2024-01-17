@@ -1,0 +1,123 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+<div class="container">
+<div class="row">
+    <div class="col-lg-2 mb-4">
+        <!-- Billing card 2-->
+        <div class="card h-100 border-start-lg border-start-secondary">
+            <div class="card-body">
+                <div>Welcome Back,</div>
+                &nbsp;
+                <h4>{{Account?.firstName}} </h4>      
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 mb-4">
+        <!-- Billing card 1-->
+        <div class="card h-100 border-start-lg border-start-primary">
+            <div class="card-body">
+                <div >Current Balance</div> &nbsp;
+                <h3>{{Cred?.accountBalance}} </h3>INR
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="col-md-20 ">
+    <div class="row ">
+        <div class="col-xl-4 col-lg-20 mb-4">
+            <div class="card h-100 l-bg-cherry">
+                <div class="card-statistic-3 p-4">
+                    <div class="card-icon card-icon-large"><i class="fas fa-dollar-sign"></i></div>
+                    <div class="mb-4">
+                        <h5 class="card-title mb-0">HDFC Bank</h5>
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        <h5 class="card-title mb-0">Debit Card</h5>
+                    </div>
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    <div class="row align-items-center mb-2 d-flex">
+                        <div class="col-xl-12">
+                            {{Cred?.debitCardNumber}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-20 mb-4">
+            <div class="card h-100 l-bg-blue-dark">
+                <div class="card-statistic-3 p-4">
+                    <div class="card-icon card-icon-large"><i class="fas fa-shopping-cart"></i></div>
+                    <div class="mb-4">
+                        <h5 class="card-title mb-0">HDFC Bank</h5>
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        <h5 class="card-title mb-0">Credit Card</h5>
+                    </div>
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    <div class="row align-items-center mb-2 d-flex">
+                        <div class="col-xl-12">
+                            {{Cred?.creditCardNumber}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Billing history card-->
+<div class="card mb-4">
+    <div class="card-header">Billing History</div>
+    <div class="card-body p-0">
+        <!-- Billing history table-->
+        <div class="table-responsive table-billing-history">
+            <table class="table mb-0">
+                <thead>
+                    <tr class="align-self-center">
+                        <th>Reference ID</th>
+                        <th>Recepient Name</th>
+                        <th>Bank Name</th>
+                        <th>Payment Type</th>
+                        <th>Paid Date</th>
+                        <th>Amount</th>
+                          <th>Status</th>
+                          <th>Proceed</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let d of data"  >
+                        <td>{{d.transactionReferenceId}}</td>
+                        <td>{{d.payeeId}}</td>
+                        <td>HDFC Bank</td>
+                        <td>{{d.modeId}}</td>
+                        <td>{{d.transactionDate}}</td> 
+                        <td>{{d.transactionamount}}</td>
+                        <td>{{d.paymentStatus}}</td>
+                        <td><button (click)="navigateverify(d.transactionReferenceId)" class="btn btn-primary"> Pay Now</button> </td>
+                    </tr>
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

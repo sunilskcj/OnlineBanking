@@ -1,0 +1,253 @@
+<div class="accordion" id="accordionPayment">
+    <div class="accordion-item mb-3">
+        <div class="container">
+            <form [formGroup]="Editprofile" >
+            <div class="form-group">
+               <div class="col-lg-3">    
+                 <div class="mb-3">
+                     <label class="form-label">First Name</label>
+                     <input type="text" class="form-control" id="firstName" formControlName="firstName">
+                 </div>
+                  <div [hidden]="Editprofile.controls['firstName'].valid || Editprofile.controls['firstName'].pristine"
+                      class="alert-danger">
+                      <div *ngIf="Editprofile.controls['firstName'].errors?.['required']">
+                        FirstName is required!!!
+                      </div>
+                   </div>
+               </div>
+               <div class="col-lg-3"> 
+                 <div class="mb-3">
+                     <label class="form-label">Middle Name</label>
+                     <input type="text" class="form-control" placeholder="" formControlName="middleName">
+                 </div>
+               </div>
+               <div class="col-lg-3"> 
+                  <div class="mb-3">
+                     <label class="form-label">Last Name</label>
+                     <input type="text" class="form-control" id="lastName" formControlName="lastName">
+                   </div>
+                   <div [hidden]="Editprofile.controls['lastName'].valid || Editprofile.controls['lastName'].pristine"
+                       class="alert-danger">
+                       <div *ngIf="Editprofile.controls['lastName'].errors?.['required']">
+                         LastName is required!!!
+                       </div>
+                   </div>
+                </div>
+             </div>
+             <div class="form-group">
+               <div class="col-lg-3">
+                   <div class="mb-3">
+                     <label class="form-label">Date of Birth</label>
+                     <input type="date" class="form-control" placeholder=""  formControlName="dob">
+                  </div>
+               </div>
+               <div class="col-lg-3">
+                 <div class="mb-3">
+                     <label class="form-label">Mobile Number</label>
+                     <input type="number" class="form-control" formControlName="mobileno">
+                 </div>
+                 <div [hidden]="Editprofile.controls['mobileno'].valid || Editprofile.controls['mobileno'].pristine"
+                    class="alert-danger">
+                    <div *ngIf="Editprofile.controls['mobileno'].errors?.['required']">
+                      MobileNumber is required!!!
+                     </div>
+                    <div *ngIf="Editprofile.controls['mobileno'].errors?.['pattern']">
+                       Please, Enter 10 digit Mobile Number.
+                    </div>  
+                  </div>
+                </div>
+              <div class="col-lg-3">
+                <div class="mb-3">
+                    <label class="form-label">EmailID</label>
+                    <input type="email" class="form-control" formControlName="emailId">
+                </div>
+                <div [hidden]="Editprofile.controls['emailId'].valid || Editprofile.controls['emailId'].pristine"
+                   class="alert-danger">
+                  <div *ngIf="Editprofile.controls['emailId'].errors?.['required']">
+                    EmailID is required!!!
+                   </div>
+                  <div *ngIf="Editprofile.controls['emailId'].errors?.['email']">
+                      Must be an email id
+                  </div>
+                 </div>
+             </div>
+             </div>
+             <div class="form-group">
+             <div class="col-lg-3">
+                <div class="mb-3">
+                    <label class="form-label">AadharCard Number</label>
+                    <input type="number" class="form-control" formControlName="aadhaarCardNumber">
+                </div>
+                <div [hidden]="Editprofile.controls['aadhaarCardNumber'].valid || Editprofile.controls['aadhaarCardNumber'].pristine"
+                   class="alert-danger">
+                   <div *ngIf="Editprofile.controls['aadhaarCardNumber'].errors?.['required']">
+                      AadhaarCardNumber is required!!!
+                  </div>
+                </div>
+             </div>
+             </div>
+             <p>ResidentialAddress</p>
+             <div class="form-group">
+                <div class="col-lg-5">
+                    <div class="mb-3">
+                        <label class="form-label">AddressLine1</label>
+                        <input type="text" class="form-control" formControlName="residentialAddressLine1">
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="mb-3">
+                        <label class="form-label">AddressLine2</label>
+                        <input type="text" class="form-control" formControlName="residentialAddressLine2"><br>
+                    </div>
+                </div>
+             </div>
+             <div class="form-group">
+                <div class="col-lg-5">
+                    <div class="mb-3">
+                        <label class="form-label">Landmark</label>
+                        <input type="text" class="form-control" formControlName="residentialLandmark">
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="mb-3">
+                        <label class="form-label">City</label>
+                        <input type="text" class="form-control" formControlName="residentialCity"><br>
+                    </div>
+                    <div [hidden]="Editprofile.controls['residentialCity'].valid || Editprofile.controls['residentialCity'].pristine"
+                      class="alert-danger">
+                     <div *ngIf="Editprofile.controls['residentialCity'].errors?.['required']">
+                       Residential City is required!!!
+                      </div>
+                    </div>
+                </div>
+             </div>
+             <div class="form-group">
+                <div class="col-lg-5">
+                    <div class="mb-3">
+                        <label class="form-label">State</label>
+                        <input type="text" class="form-control" formControlName="residentialState">
+                    </div>
+                    <div [hidden]="Editprofile.controls['residentialState'].valid || Editprofile.controls['residentialState'].pristine"
+                      class="alert-danger">
+                      <div *ngIf="Editprofile.controls['residentialState'].errors?.['required']">
+                        Residential State is required!!!
+                      </div>
+                   </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="mb-3">
+                        <label class="form-label">Pincode</label>
+                        <input type="number" class="form-control" formControlName="residentialPincode"><br>
+                    </div>
+                    <div [hidden]="Editprofile.controls['residentialPincode'].valid || Editprofile.controls['residentialPincode'].pristine"
+                      class="alert-danger">
+                       <div *ngIf="Editprofile.controls['residentialPincode'].errors?.['required']">
+                         Residential Pincode is required!!!
+                        </div>
+                   </div>
+                </div>
+             </div>
+             <div class="form-group">
+             <div class="col-lg-3">
+                <p>
+                <input type="checkbox" name="Residential Address" value="Residential Address" >&nbsp; Same as Residential Address
+                </p>
+              </div>
+             </div>
+              <br>
+             <p>Permanent Address</p>
+             <div class="form-group">
+                <div class="col-lg-5">
+                    <div class="mb-3">
+                        <label class="form-label">AddressLine1</label>
+                        <input type="text" class="form-control" formControlName="permanentAddressLine1">
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="mb-3">
+                        <label class="form-label">AddressLine2</label>
+                        <input type="text" class="form-control" formControlName="permanentAddressLine2"><br>
+                    </div>
+                </div>
+             </div>
+             <div class="form-group">
+             <div class="row">
+                <div class="col-lg-5">
+                    <div class="mb-3">
+                        <label class="form-label">Landmark</label>
+                        <input type="text" class="form-control" formControlName="permanentLandmark">
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="mb-3">
+                        <label class="form-label">City</label>
+                        <input type="text" class="form-control" formControlName="permanentCity"><br>
+                    </div>
+                </div>
+             </div>
+             </div>
+             <div class="form-group">
+                <div class="col-lg-5">
+                    <div class="mb-3">
+                        <label class="form-label">State</label>
+                        <input type="text" class="form-control" formControlName="permanentState">
+                    </div>
+                    <div [hidden]="Editprofile.controls['permanentState'].valid || Editprofile.controls['permanentState'].pristine"
+                       class="alert-danger">
+                      <div *ngIf="Editprofile.controls['permanentState'].errors?.['required']">
+                        Permanent State is required!!!
+                      </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="mb-3">
+                        <label class="form-label">Pincode</label>
+                        <input type="number" class="form-control" formControlName="permanentPincode"><br>
+                    </div>
+                </div>
+             </div>
+             <p>Occupation</p>
+                <div class="form-group">
+                   <div class="col-lg-5">
+                       <div class="mb-3">
+                           <label class="form-label">Occupation Details</label>
+                           <input type="text" class="form-control" formControlName="occupationdetails">
+                       </div>
+                   </div>
+                   <div class="col-lg-5">
+                       <div class="mb-3">
+                           <label class="form-label">Occupation Type</label>
+                           <input type="text" class="form-control" formControlName="occupationType"><br>
+                       </div>
+                   </div>
+                </div>
+                <div class="form-group">
+                   <div class="col-lg-5">
+                       <div class="mb-3">
+                           <label class="form-label">Source of Income</label>
+                           <input type="text" class="form-control" formControlName="sourceofincome">
+                       </div>
+                   </div>
+                   <div class="col-lg-5">
+                       <div class="mb-3">
+                           <label class="form-label">Gross Annual Income</label>
+                           <input type="number" class="form-control" formControlName="grossAnnualIncome"><br>
+                       </div>
+                   </div>
+                </div>
+
+            </form>         
+            
+            <div [hidden]="!errorMessage" class="alert alert-warning" role="alert">
+        {{errorMessage}}
+      </div><div [hidden]="!succes" class="alert alert-primary" role="alert">
+        {{succes}} <br>
+        <button (click)="navigateProfile()"  class="btn btn-primary"  >View Profile</button>
+      </div>
+           
+            <div>
+                <button (click)="updatedata()" class="btn btn-primary w-20 mt-2">Update</button>
+            </div><br>
+            </div>
+        </div>          
+    </div>
