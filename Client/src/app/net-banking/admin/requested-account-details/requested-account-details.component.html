@@ -1,0 +1,36 @@
+<br>
+<div class="accordion" id="accordionPayment">
+    <div class="accordion-item mb-3">
+        <div class="container"><br>
+            <div>
+            <label class="form-label">First Name - {{Account?.firstName}}</label>
+        </div> 
+        <br>
+        <div>
+            <label class="form-label">Middle Name - {{Account?.middleName}}</label>
+        </div>
+        <br>
+        <div>
+            <label class="form-label">Last Name - {{Account?.lastName}}</label> 
+        </div>
+        <br>
+        <div>
+            <label class="form-label">Mobile Number - {{Account?.mobileno}}</label>
+        </div>
+        <br>
+        <div>
+            <label class="form-label">Aadhar Card Number -{{Account?.aadhaarCardNumber}}</label>
+        </div>
+        <br>
+        <div>
+            <label class="form-label">Date of Birth - {{Account?.dob}}</label>
+        </div>
+        <br>
+        <div>
+            <button class="btn btn-primary w-20 mt-2" (click)="approve()" >Approve</button> &nbsp;
+            <button class="btn btn-danger w-20 mt-2" (click)="deny()" >Deny</button>
+        </div><br>
+        </div>
+    </div>
+</div>
+
