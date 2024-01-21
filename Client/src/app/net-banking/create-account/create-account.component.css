@@ -1,0 +1,19 @@
+
+h1{
+    text-align: left;
+    color: blue;
+}
+*{
+    text-align: left;
+}
+p.double {border-style: double;
+            }
+text{
+    color:royalblue;
+}
+label{
+    color: royalblue;
+}
+p{
+    color: royalblue;
+}
