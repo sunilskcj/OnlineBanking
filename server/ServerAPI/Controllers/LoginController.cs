@@ -3,10 +3,7 @@ using DataAccessLayer.Models;
 using DataAccessLayer.Repository.Abstraction;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
+using ServerAPI.Authentication;
 
 namespace ServerAPI.Controllers
 {
@@ -17,11 +14,13 @@ namespace ServerAPI.Controllers
         private IConfiguration configuration;
 
         private IAuthenticationDaoImpl authenticationDaoImpl;
+        private IJwtTokenManager jwtTokenManager;
 
-        public LoginController(IAuthenticationDaoImpl authenticationDaoImpl, IConfiguration configuration)
+        public LoginController(IAuthenticationDaoImpl authenticationDaoImpl, IConfiguration configuration, IJwtTokenManager _jwtmanager)
         {
             this.authenticationDaoImpl = authenticationDaoImpl;
             this.configuration = configuration;
+            this.jwtTokenManager = _jwtmanager;
         }
 
 
@@ -31,7 +30,7 @@ namespace ServerAPI.Controllers
         {
             bool res = authenticationDaoImpl.IsAuthenticatedUser(cred);
             if (!res) return this.NotFound("Not found");
-            var tokenval = GenerateJwt(cred);
+            var tokenval = jwtTokenManager.GenerateJwt(cred);
 
             return this.Ok(new { token = tokenval });
         }
@@ -42,36 +41,12 @@ namespace ServerAPI.Controllers
         {
             bool res = authenticationDaoImpl.IsAuthenticatedAdmin(cred);
             if (!res) return this.NotFound("Not found");
-            var tokenval = GenerateJwt(cred);
+            var tokenval = jwtTokenManager.GenerateJwt(cred);
 
             return this.Ok(new { token = tokenval });
         }
 
-        private string GenerateJwt(LoginModel cred)
-        {
-            string secretKey = this.configuration["Jwt:Key"];
-            byte[] secrectKeyByteArray = Encoding.UTF8.GetBytes(secretKey);
-            SymmetricSecurityKey tokenKey = new SymmetricSecurityKey(secrectKeyByteArray);
-            SigningCredentials signingCredentials = new SigningCredentials(tokenKey, SecurityAlgorithms.HmacSha256);
-            Claim userNameBasedClaim = new Claim(ClaimTypes.Name, cred.CustomerId.ToString());
-
-            Claim[] userClaims = new Claim[] { userNameBasedClaim };
-            ClaimsIdentity identiy = new ClaimsIdentity(userClaims);
-            SecurityTokenDescriptor tokeDescriptor = new SecurityTokenDescriptor
-            {
-                Issuer = this.configuration["Jwt:Issuer"],
-                Audience = this.configuration["Jwt:Audience"],
-                IssuedAt = DateTime.Now,
-                Subject = identiy,
-                Expires = DateTime.Now.AddMinutes(45),
-                SigningCredentials = signingCredentials
-            };
-            JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
-            SecurityToken securityToken = tokenHandler.CreateToken(tokeDescriptor);
-            string token = tokenHandler.WriteToken(securityToken);
-            return token;
-
-        }
+       
 
         [HttpPut]
         [Route("changepassword")]

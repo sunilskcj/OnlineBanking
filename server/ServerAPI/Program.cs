@@ -3,8 +3,9 @@ using DataAccessLayer.Repository.Implementation;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-
+using Microsoft.Extensions.Configuration;
 using System.Text;
+using ServerAPI.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,10 +16,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddCors();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<IAccountFieldDao, AccountFieldDao>();
-builder.Services.AddSingleton<ICredentialsDaoImpl, CredentialsDaoImpl>();
-builder.Services.AddSingleton<ITransactionDaoImpl, TransactionDaoImpl>();
-builder.Services.AddSingleton<IPayeeDaoImpl, PayeeDaoImpl>();
+builder.Services.AddScoped<IAccountFieldDao, AccountFieldDao>();
+builder.Services.AddScoped<ICredentialsDaoImpl, CredentialsDaoImpl>();
+builder.Services.AddScoped<ITransactionDaoImpl, TransactionDaoImpl>();
+builder.Services.AddScoped<IPayeeDaoImpl, PayeeDaoImpl>();
 builder.Services.AddTransient<IAuthenticationDaoImpl, AuthenticationDaoImpl>();
 
 var app = builder.Build();
