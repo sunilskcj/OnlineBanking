@@ -5,14 +5,14 @@ using System.Security.Claims;
 using System.Text;
 namespace ServerAPI.Authentication
 {
-    public class JwtTokenManager
+    public class JwtTokenManager : IJwtTokenManager
     {
         private IConfiguration configuration;
         public JwtTokenManager(IConfiguration _configuration)
         {
             this.configuration = _configuration;
         }
-        string GenerateJwt(LoginModel cred)
+        public string GenerateJwt(LoginModel cred)
         {
             string secretKey = this.configuration["Jwt:Key"];
             byte[] secrectKeyByteArray = Encoding.UTF8.GetBytes(secretKey);
@@ -37,5 +37,7 @@ namespace ServerAPI.Authentication
             return token;
 
         }
+
+        
     }
 }

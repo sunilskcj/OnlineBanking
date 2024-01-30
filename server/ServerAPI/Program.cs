@@ -16,6 +16,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddCors();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton<IJwtTokenManager, JwtTokenManager>();
 builder.Services.AddScoped<IAccountFieldDao, AccountFieldDao>();
 builder.Services.AddScoped<ICredentialsDaoImpl, CredentialsDaoImpl>();
 builder.Services.AddScoped<ITransactionDaoImpl, TransactionDaoImpl>();
